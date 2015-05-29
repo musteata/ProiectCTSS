@@ -1,5 +1,8 @@
 package ro.adi.proiect;
 
+import java.io.File;
+import java.util.Scanner;
+
 import ro.adi.proiect.Factory.AnimaleFactory;
 import ro.adi.proiect.Factory.IAnimale;
 import ro.adi.proiect.Observer.Animale;
@@ -14,7 +17,7 @@ public class TestDesignPatterns {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		/////////SINGLETON//////////
+	/*	/////////SINGLETON//////////
 		Proprietar c = Proprietar.getInstanta();
 		System.out.println(c.getNume() + " "+ c.getPrenume() + " "+ c.getCNP() + " "+ c.getNationalitate());
 		
@@ -40,6 +43,69 @@ public class TestDesignPatterns {
 		anim.adaugaObserver(cumparator1);
 		
 		anim.setStatus("NU");
+		
+		*/
+		
+		
+		///////////CITIRE FISIER/////////
+			IAnimale a;
+			File f = new File ("caini.txt");
+			File g = new File ("pisica.txt");
+			File h = new File ("papagal.txt");
+			try{
+				Scanner scan = new Scanner(f);
+				while (scan.hasNext())
+				{
+					String line = scan.nextLine();
+					String[] vector = line.split(" ");
+					AnimaleFactory fct = new AnimaleFactory();
+					a= fct.getAnimale("Caine");
+					a.creareAnimal(vector[0], Float.parseFloat(vector[1]),Double.parseDouble(vector[2]));
+					a.afisareAnimal();
+			
+				}
+				scan.close();
+			}
+			 catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			try{
+				Scanner scan = new Scanner(g);
+				while (scan.hasNext())
+				{
+					String line = scan.nextLine();
+					String[] vector = line.split(" ");
+					AnimaleFactory fct = new AnimaleFactory();
+					a= fct.getAnimale("Pisica");
+					a.creareAnimal(vector[0], Float.parseFloat(vector[1]),Double.parseDouble(vector[2]));
+					a.afisareAnimal();
+			
+				}
+				scan.close();
+			}
+			 catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			try{
+				Scanner scan = new Scanner(h);
+				while (scan.hasNext())
+				{
+					String line = scan.nextLine();
+					String[] vector = line.split(" ");
+					AnimaleFactory fct = new AnimaleFactory();
+					a= fct.getAnimale("Papagal");
+					a.creareAnimal(vector[0], Float.parseFloat(vector[1]),Double.parseDouble(vector[2]));
+					a.afisareAnimal();
+			
+				}
+				scan.close();
+			}
+			 catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	}
 
 }

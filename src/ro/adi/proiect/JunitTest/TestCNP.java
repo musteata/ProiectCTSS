@@ -39,31 +39,6 @@ assertEquals("barbat", sex);
 		}
 
 	@Test
-	public void TelefonMobilPrimele(){
-		String nume ="Sergiu";
-		String prenume = "Stefan";
-		String cnp = "2857332221";
-		String telefonMobil = "06556456565565";	
-		int varsta = 21;
-		Cumparatori a = new Cumparatori(nume, prenume,null,varsta,telefonMobil);
-		assertFalse(a.TelefonMobil());
-		a.setTelefonMObil("07");
-	//	assertTrue(a.tele());
-		}
-	
-	@Test
-	public void Telefonvalids(){
-		String nume ="Sergiu";
-		String prenume = "Stefan";
-		String cnp = "2857332221";
-		String telefonMobil = "06556456565565";	
-		int varsta = 21;
-		Cumparatori a = new Cumparatori(nume, prenume,null,varsta,telefonMobil);
-		assertFalse(a.Telefonvalids());
-		a.setTelefonMObil("0749605208");
-		assertTrue(a.Telefonvalids());
-		}
-	@Test
 	public void CnpValidd(){
 		String nume ="Musteata";
 		String prenume = "Adrian";
@@ -75,17 +50,7 @@ assertEquals("barbat", sex);
 		a.setCnp("1234567891234");
 	//	assertTrue(a.CnpValid());
 		}
-	@Test
-	public void testConstructor(){
-		String nume ="Gigi",
-				prenume = "Sise";
-		String cnp = "2857332221";
-		String telefonMobil ="06556456565565";
-		int varsta = 21;
-		Cumparatori a = new Cumparatori(nume, prenume,cnp,varsta,telefonMobil);
-		assertEquals(a.getCnp(), "2857332221");
-		//assertEquals(a.getPrenume(), "Prichici");
-		}
+
 
 	
 

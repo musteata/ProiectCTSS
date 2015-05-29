@@ -5,8 +5,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TestCNP.class, TestMajor.class, TestNume.class,
-		TestPrenume.class, TestPret.class, TestVarsta.class })
+@SuiteClasses({ TestCNP.class, TestConstructor.class, TestMajor.class,
+		TestNrTelefon.class, TestNume.class, TestPrenume.class, TestPret.class,
+		TestSingleton.class, TestVarsta.class })
 public class SuiteCase {
 
 }

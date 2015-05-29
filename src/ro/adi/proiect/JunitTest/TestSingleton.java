@@ -8,11 +8,7 @@ import ro.adi.proiect.Singletton.Proprietar;
 
 public class TestSingleton {
 
-
-
-
-
-@Test
+	@Test
 	public void testMainFrameSingletonNotNull() {
 		Proprietar mf1 = Proprietar.getInstanta();
 		assertNotNull(mf1);
@@ -29,11 +25,7 @@ public class TestSingleton {
 		Proprietar firma1 = Proprietar.getInstanta();
 		assertNotNull(firma1);
 	}
-	
-	@Test
-	public void test() {
-		//fail("Not yet implemented");
-	}
+
 	
 	@Test
 	public void testMainFrameSingletonSame() {
